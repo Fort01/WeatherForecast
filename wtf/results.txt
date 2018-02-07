@@ -1,0 +1,9 @@
+The weather forecast for the date 30/10/2017 in New York is: 
+
+Max percentage humidity:		93
+
+Max Temp in C:					16
+
+Min Temp in C:					8
+
+Precipitation in mm:			6.35
