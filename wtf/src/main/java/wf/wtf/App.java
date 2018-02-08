@@ -25,10 +25,6 @@ public class App {
 
 		String url = "http://api.wunderground.com/api/445c149f378500cf/history_20171030/q/NY/New_York.json";
 
-		//RestTemplate rest = new RestTemplate();
-		//String result = rest.getForObject(url, String.class);
-		//System.out.println(result);
-
 		ObjectMapper mapper = new ObjectMapper();
 		Model model = new Model();
 		
