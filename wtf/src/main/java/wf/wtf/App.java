@@ -4,11 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.springframework.web.client.RestTemplate;
 
 import model.Dailysummary;
 import model.Model;
@@ -23,16 +23,17 @@ public class App {
 	public static void main(String[] args) 
 	{
 
-		String url = "http://api.wunderground.com/api/445c149f378500cf/history_20171030/q/NY/New_York.json";
+		String url = "http://api.wunderground.com/api/445c149f378500cf/history_20171130/q/NY/New_York.json";
 
-		RestTemplate rest = new RestTemplate();
-		String result = rest.getForObject(url, String.class);
-		// System.out.println(result);
+		//RestTemplate rest = new RestTemplate();
+		//String result = rest.getForObject(url, String.class);
+		//System.out.println(result);
 
 		ObjectMapper mapper = new ObjectMapper();
 		Model model = new Model();
+		
 		try {
-			model = mapper.readValue(result, Model.class);
+			model = mapper.readValue(new URL(url), Model.class);
 
 		} catch (JsonParseException e) {
 			e.printStackTrace();
@@ -46,7 +47,7 @@ public class App {
 		PrintWriter writer = null;
 
 		try {
-			writer = new PrintWriter("results.txt", "UTF-8");
+			writer = new PrintWriter("Result1.txt", "UTF-8");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
@@ -60,6 +61,8 @@ public class App {
 		writer.println("\nPrecipitation in mm:\t\t\t" + myDailySum.getPrecipm());
 
 		writer.close();
+		
+		System.out.println("OK");
 
 	}
 
