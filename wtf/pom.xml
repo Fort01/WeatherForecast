@@ -22,19 +22,8 @@
 			<scope>test</scope>
 		</dependency>
 
-	<!--	
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>3.0.2.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.13</version>
-		</dependency>
-	!-->
+		
+		
 	
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -43,6 +32,8 @@
 		</dependency>
 	
 
+		
+		
 
 	</dependencies>
 </project>
