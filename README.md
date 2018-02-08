@@ -21,10 +21,10 @@ I got the requested metrics from DailySummary object and export them at a 'Resul
 
   Max percentage humidity:		93
 
-  Max Temp in C:		 	16
+  Max Temp in C:						 	16
 
-  Min Temp in C:		 	8
+  Min Temp in C:		 					8
 
-  Precipitation in mm:			6.35
+  Precipitation in mm:				6.35
 
 
