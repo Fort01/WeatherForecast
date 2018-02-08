@@ -6,9 +6,9 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import model.Dailysummary;
 import model.Model;
@@ -23,7 +23,7 @@ public class App {
 	public static void main(String[] args) 
 	{
 
-		String url = "http://api.wunderground.com/api/445c149f378500cf/history_20171130/q/NY/New_York.json";
+		String url = "http://api.wunderground.com/api/445c149f378500cf/history_20171030/q/NY/New_York.json";
 
 		//RestTemplate rest = new RestTemplate();
 		//String result = rest.getForObject(url, String.class);
@@ -47,7 +47,7 @@ public class App {
 		PrintWriter writer = null;
 
 		try {
-			writer = new PrintWriter("Result1.txt", "UTF-8");
+			writer = new PrintWriter("Result.txt", "UTF-8");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
