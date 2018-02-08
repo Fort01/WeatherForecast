@@ -28,3 +28,4 @@ I got the requested metrics from DailySummary object and export them at a 'Resul
   Precipitation in mm:				6.35
 
 
+ 
